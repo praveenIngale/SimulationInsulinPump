@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4_2" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c9fff558-ac17-425c-bf9e-c4255fa54074">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<queryString>
+		<![CDATA[select * from bolus]]>
+	</queryString>
+	<field name="date" class="java.lang.Object"/>
+	<field name="time" class="java.lang.Object"/>
+	<field name="blood_glucose" class="java.lang.Object"/>
+	<field name="insulin_dose" class="java.lang.Object"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="38" splitType="Stretch">
+			<staticText>
+				<reportElement x="90" y="0" width="70" height="30" uuid="9be26a4f-fb06-42c1-867c-cd54b95c066b"/>
+				<text><![CDATA[date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="0" width="70" height="30" uuid="d375dc59-ff1a-4f44-beda-650445e6f97e"/>
+				<text><![CDATA[time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="0" width="70" height="30" uuid="190d76a4-7b10-4cd8-b1c6-8bb0bd872aa1"/>
+				<text><![CDATA[blood_glucose]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="0" width="70" height="30" uuid="3597f7bf-8189-4a78-9265-f90fa6533e1b"/>
+				<text><![CDATA[insulin_dose]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="50" splitType="Stretch">
+			<textField>
+				<reportElement x="90" y="10" width="70" height="30" uuid="459c7d2c-b8dd-4373-9bbc-b0a68c0040eb"/>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="10" width="70" height="30" uuid="957f1e25-4843-4f3f-833e-02e70e947a6d"/>
+				<textFieldExpression><![CDATA[$F{time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="10" width="70" height="30" uuid="3df0b2df-c012-456e-991c-83b3d0a1b995"/>
+				<textFieldExpression><![CDATA[$F{blood_glucose}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="10" width="70" height="30" uuid="62ead678-0c62-4fa6-a488-2d775c674a43"/>
+				<textFieldExpression><![CDATA[$F{insulin_dose}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
